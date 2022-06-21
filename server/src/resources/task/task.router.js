@@ -5,6 +5,8 @@ const taskController = require('./task.controller');
 const router = Router();
 router.get("/", taskController.findMany);
 router.post("/", taskController.createOne);
+router.get("/:id", taskController.findOne)
+router.put("/:id", taskController.updateOne);
 
 
 module.exports = router;
