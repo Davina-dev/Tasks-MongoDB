@@ -4,8 +4,6 @@ const createOne = async (req, res) => {
   
   try {
     const newTask = req.body
-   
-
     const doc = await Task.create(newTask)
     res.status(200).json({ result: [doc] })
   } catch (e) {
